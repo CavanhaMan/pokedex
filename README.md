@@ -19,6 +19,13 @@ API:
 https://pokeapi.co/
 
 ------------------------------------
+ACRESCENTEI:
+- controle pelas setas do teclado
+- as setas do teclado ativam os botoes do site
+- controle de final e início da lista de pokemons (vai até 898)
+- controle de pokemons sem imagens (acima de 649)
+- numero de pokemons em separado porque existem nomes muito extensos (o pokemon 642 é um exemplo)
+------------------------------------
 IDEIAS:
 - ativar botao ligar/desligar sobre botao grande azul no topo (e uma tela "desligada" e tela ligando e desligando - tela de boot?)
 - ativar os LEDs superiores: green, yellow e red

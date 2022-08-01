@@ -45,10 +45,16 @@ const renderPokemon = async (pokemon) => {
       searchPokemon = data.id;
     } else {
       pokemonImage.style.display = 'none';
-      pokemonName.innerHTML = 'Não encontrado no pokedex!';
+      pokemonName.innerHTML = 'Não encontrado no PokeDex!';
       pokemonNumber.innerHTML = '';
     }
   }
   
   renderPokemon('300');
   renderPokemon('charizard');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    renderPokemon(input.value.toLowerCase());
+  });
+  

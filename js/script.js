@@ -65,7 +65,7 @@ const renderPokemon = async (pokemon) => {
   });
   
   buttonNext.addEventListener('click', () => {
-    if (searchPokemon < 249) {
+    if (searchPokemon < 249) { //acima de 249 não tem imagens! criar uma search sem imagem?
         searchPokemon += 1;
         renderPokemon(searchPokemon);
     }

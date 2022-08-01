@@ -58,17 +58,17 @@ const renderPokemon = async (pokemon) => {
   });
   
   buttonPrev.addEventListener('click', () => {
-    if (searchPokemon > 1) {
-      searchPokemon -= 1;
+    searchPokemon -= 1;
+    console.log(searchPokemon);
+    if (searchPokemon < 1) searchPokemon = 649;
       renderPokemon(searchPokemon);
-    }
   });
   
   buttonNext.addEventListener('click', () => {
-    if (searchPokemon < 249) { //acima de 249 não tem imagens! criar uma search sem imagem?
-        searchPokemon += 1;
-        renderPokemon(searchPokemon);
-    }
+    searchPokemon += 1;
+    console.log(searchPokemon);
+    if (searchPokemon > 649) searchPokemon = 1; //acima de 649 não tem imagens! criar uma search sem imagem?
+    renderPokemon(searchPokemon);
   });
   
 

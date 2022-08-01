@@ -65,8 +65,10 @@ const renderPokemon = async (pokemon) => {
   });
   
   buttonNext.addEventListener('click', () => {
-    searchPokemon += 1;
-    renderPokemon(searchPokemon);
+    if (searchPokemon < 249) {
+        searchPokemon += 1;
+        renderPokemon(searchPokemon);
+    }
   });
   
 

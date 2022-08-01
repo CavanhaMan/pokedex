@@ -17,3 +17,15 @@ GIT:
 https://github.com/manualdodev/pokedex
 API:
 https://pokeapi.co/
+
+------------------------------------
+IDEIAS:
+- ativar botao ligar/desligar sobre botao grande azul no topo (e uma tela "desligada" e tela ligando e desligando - tela de boot?)
+- ativar os LEDs superiores: green, yellow e red
+    - red para pesquisa errada
+    - yellow para "carregando..."
+    - gren para tudo OK
+- criar botão INICIO, FIM, ANTERIOR, PROXIMO e MAIS INFO
+- criar botão "mais detalhes" ou "mais info" para mostrar ataques e outras informações (entao trocaria a tela)
+
+- ver quais outros GIFs são obtidos através da API e ver como usá-los em outras telas (e acrescentar respectivos botoes)

@@ -14,24 +14,25 @@ const fetchPokemon = async (pokemon) => {
     console.log(APIResponse);
 
     //acessando os dados json da consulta API:
-    const data = await APIResponse.json();
+    if (APIResponse.status === 200) {
+        const data = await APIResponse.json();
+    
+        console.log(data);
+        console.log("Nome do pokemon: "+data.name);
+        console.log("Numero do pokemon: "+data.id);
+        console.log("Tipo do pokemon: "+ data['types']['0']['type']['name']);
+        console.log("Ataques: "+ data['moves']['0']['move']['name']
+        + ", " + data['moves']['1']['move']['name']);
 
-    console.log(data);
-    console.log("Nome do pokemon: "+data.name);
-    console.log("Numero do pokemon: "+data.id);
-    console.log("Tipo do pokemon: "+ data['types']['0']['type']['name']);
-    console.log("Ataques: "+ data['moves']['0']['move']['name']
-    + ", " + data['moves']['1']['move']['name']);
-
-    return data;
-
+        return data;
+}
 }
 
 //fetchPokemon('25');
 
 const renderPokemon = async (pokemon) => {
 
-    pokemonName.innerHTML = 'Loading...';
+    pokemonName.innerHTML = 'Pesquisando...';
     pokemonNumber.innerHTML = '';
   
     const data = await fetchPokemon(pokemon);
@@ -45,7 +46,7 @@ const renderPokemon = async (pokemon) => {
       searchPokemon = data.id;
     } else {
       pokemonImage.style.display = 'none';
-      pokemonName.innerHTML = 'Não encontrado no PokeDex!';
+      pokemonName.innerHTML = 'Não encontrado!';
       pokemonNumber.innerHTML = '';
     }
   }

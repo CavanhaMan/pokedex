@@ -51,11 +51,25 @@ const renderPokemon = async (pokemon) => {
     }
   }
   
-  renderPokemon('300');
-  renderPokemon('charizard');
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     renderPokemon(input.value.toLowerCase());
   });
   
+  buttonPrev.addEventListener('click', () => {
+    if (searchPokemon > 1) {
+      searchPokemon -= 1;
+      renderPokemon(searchPokemon);
+    }
+  });
+  
+  buttonNext.addEventListener('click', () => {
+    searchPokemon += 1;
+    renderPokemon(searchPokemon);
+  });
+  
+
+
+  renderPokemon('1');
+  //renderPokemon('charizard');

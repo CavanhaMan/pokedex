@@ -73,5 +73,5 @@ const renderPokemon = async (pokemon) => {
   
 
 
-  renderPokemon('1');
+  renderPokemon('600');
   //renderPokemon('charizard');
